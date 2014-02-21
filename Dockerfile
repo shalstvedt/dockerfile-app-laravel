@@ -1,10 +1,10 @@
 # Base Docker File
 # Extends base/nginx
 # https://github.com/outrunthewolf/dockerfile-base-nginx
-FROM base/nginx
+FROM shalstvedt/nginx
 
 # Miantainer
-MAINTAINER outrunthewolf
+MAINTAINER shalstvedt
 
 # ENVIRONMENTAL variables
 ENV USERNAME laravel
