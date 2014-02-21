@@ -33,6 +33,11 @@ EXPOSE 80
 
 RUN apt-get install -y php5-sybase php5-odbc freetds-bin
 
+
+WORKDIR /home/laravel
+RUN composer install
+
+WORKDIR /
+
 # CMD
-CMD php5-fpm && \
-	/usr/local/nginx/sbin/nginx
+CMD cd /home/laravel && composer install && php5-fpm && /usr/local/nginx/sbin/nginx
