@@ -1,7 +1,7 @@
 # Base Docker File
 # Extends base/nginx
 # https://github.com/outrunthewolf/dockerfile-base-nginx
-FROM app/laravel54
+FROM base/nginx
 
 # Miantainer
 MAINTAINER outrunthewolf
