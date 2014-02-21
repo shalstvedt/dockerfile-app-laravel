@@ -33,6 +33,8 @@ EXPOSE 80
 
 RUN apt-get install -y php5-sybase php5-odbc freetds-bin
 
+# mount volumes
+VOLUME ["~/ediscovery-web:/home/laravel"]
 
 # CMD
 CMD cd /home/laravel && composer install && php5-fpm && /usr/local/nginx/sbin/nginx
